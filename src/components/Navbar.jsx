@@ -113,7 +113,7 @@ export default function Navbar() {
             isMenuOpen ? "max-h-60 opacity-100 mb-2" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="flex flex-col space-y-4 py-4 px-2 text-sm">
+          <nav className="flex flex-col space-y-4 py-4 px-2">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
@@ -121,7 +121,7 @@ export default function Navbar() {
                 className={`transition-colors hover:text-secondary ${
                   isLinkActive(item.href, item.exact)
                     ? "text-secondary font-semibold"
-                    : "text-gray-700 hover:text-gray-900"
+                    : "text-gray-700"
                 }
                 `}
               >
