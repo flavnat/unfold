@@ -5,19 +5,19 @@ const services = [
     headline: "Learning & Development",
     description:
       "We design practical, people-centered learning experiences that build individual skills and institutional capacity. ",
-    icon: "/src/assets/icon/deep-learning.png",
+    icon: "/assets/icon/deep-learning.png",
   },
   {
     headline: "Consulting & Advisory",
     description:
       "We work alongside organizations to solve complex problems with clarity and evidence-based insight. ",
-    icon: "/src/assets/icon/strategic-consulting.png",
+    icon: "/assets/icon/strategic-consulting.png",
   },
   {
     headline: "Project Management",
     description:
       "We offer end-to-end support for managing initiatives that deliver real impact on time and within budget.",
-    icon: "/src/assets/icon/folder-management.png",
+    icon: "/assets/icon/folder-management.png",
   },
 ];
 

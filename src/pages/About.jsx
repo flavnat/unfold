@@ -25,7 +25,7 @@ function About() {
         {/* Image */}
         <div className="mt-10 px-4 sm:px-6 lg:px-8">
           <img
-            src="src\assets\hero1.png"
+            src="/assets/hero1.png"
             className="object-cover h-[300px] sm:h-[400px] md:h-[500px] w-full rounded-3xl shadow-lg"
             alt="Hero"
           />

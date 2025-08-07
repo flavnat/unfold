@@ -3,25 +3,25 @@ const teamMembers = [
     id: 1,
     name: "Mekonnen Mengesha",
     role: "Head of Organizational Learning & Growth",
-    image: "src/assets/team/team1.png", 
+    image: "/assets/team/team1.png", 
   },
   {
     id: 2,
     name: "Chere Lemma",
     role: "Head of Technology & Process Optimization",
-    image: "src/assets/team/team2.png",
+    image: "/assets/team/team2.png",
   },
   {
     id: 3,
     name: "Dawit Teshome",
     role: "Head of Business Innovation & Consultancy",
-    image: "src/assets/team/team2.png",
+    image: "/assets/team/team2.png",
   },
   {
     id: 4,
     name: "Dawit Teshome",
     role: "Head of Business Innovation & Consultancy",
-    image: "src/assets/team/team2.png",
+    image: "/assets/team/team2.png",
   },
 ];
 
