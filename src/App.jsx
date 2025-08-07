@@ -9,10 +9,12 @@ import { Route } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import ScrollToTop from "../utils/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" index element={<Home />} />
         <Route path="/about" element={<About />} />
