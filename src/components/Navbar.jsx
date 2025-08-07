@@ -49,7 +49,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden sm:flex items-center gap-8">
+          <nav className="hidden sm:flex items-center gap-8 text-lg">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
