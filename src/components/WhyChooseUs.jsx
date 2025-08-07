@@ -55,8 +55,8 @@ function WhyChooseUs() {
           Solution is the Right Choice
         </h1>
         <p className="mt-4 text-zinc-500 lowercase text-base sm:text-lg">
-          Better Energy Starts Here that is Powered by Advanced Solar Materials
-          and with it’s Modern Tech
+          Excellence Begins Here Powered by Unfold Solutions, where
+          innovation, modern technology, and transformative impact come together
         </p>
       </div>
 

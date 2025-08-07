@@ -16,9 +16,9 @@ function About() {
             <span className="font-semibold text-secondary"> unfold.</span>
           </h1>
           <p className="text-base sm:text-lg text-zinc-600 max-w-3xl mx-auto">
-            The AI SDR that automatically identifies high-intent prospects,
-            performs, crafts hyper-relevant personalized outreach and books
-            sales calls.
+            Rooted in people, powered by insight we help organizations evolve
+            through strategic consulting, capacity building, and transformative
+            learning experiences
           </p>
         </div>
 

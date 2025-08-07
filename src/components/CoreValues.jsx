@@ -32,7 +32,7 @@ function CoreValues() {
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
         {/* Left Column - Sticky Title */}
         <div className="space-y-6 md:space-y-8 md:sticky md:top-20">
-          <h1 className="text-4xl sm:text-5xl leading-tight">
+          <h1 className="text-4xl md:text-5xl leading-tight">
             Our Values at
             <span className="font-medium text-secondary"> Unfold </span>
             Solutions
