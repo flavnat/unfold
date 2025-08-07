@@ -41,7 +41,7 @@ function Hero() {
       {/* Image */}
       <div className="my-10 md:flex hidden">
         <img
-          src="/src/assets/hero1.png"
+          src="/assets/hero1.png"
           alt="Hero illustration"
           className="max-w-full h-auto rounded-2xl shadow-lg"
         />

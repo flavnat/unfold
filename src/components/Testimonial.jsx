@@ -78,7 +78,7 @@ function Testimonial() {
           </h4>
           <div>
             <img
-              src="/src/assets/testimonial.png"
+              src="/assets/testimonial.png"
               alt="Client success story"
               className="w-full h-auto rounded-2xl"
             />

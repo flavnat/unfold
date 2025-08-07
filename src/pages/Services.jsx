@@ -17,7 +17,7 @@ function Services() {
         </div>
         <div className="">
           <img
-            src="src\assets\hero1.png"
+            src="/assets/hero1.png"
             className="object-cover md:h-[500px] h-[300px] w-full rounded-3xl"
             alt=""
             srcset=""
