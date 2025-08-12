@@ -171,7 +171,7 @@ function About() {
           >
             <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-serif">
               Meet the <span className="font-serif"> experts behind </span>
-              AirList
+              Unfold Solutions
               <br className="hidden sm:block" />
               your trusted IT Partners
             </h1>
