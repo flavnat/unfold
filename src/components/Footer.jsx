@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-secondary text-white min-h-32 p-6 md:grid md:grid-cols-3 md:gap-x-4 md:p-10">
+    <footer className="text-white min-h-32 p-6 md:grid md:grid-cols-3 md:gap-x-4 md:p-10">
       {/* First Column */}
       <div className="space-y-6 mb-8 md:mb-0">
         <h1 className="text-2xl uppercase flex items-center">

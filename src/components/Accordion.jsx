@@ -49,7 +49,7 @@ const Accordion = ({
               type="button"
               aria-expanded={isOpen}
             >
-              <div className="space-y-1 text-left">
+              <div className="space-y-1 text-left cursor-pointer">
                 <span className="flex items-center text-2xl">
                   {child.props.title}
                 </span>
@@ -62,19 +62,6 @@ const Accordion = ({
                   isOpen ? "rotate-90" : ""
                 }`}
               >
-                {isOpen ? (
-                  <ChevronUp
-                    size={30}
-                    strokeWidth={1.2}
-                    className="text-gray-500"
-                  />
-                ) : (
-                  <ChevronDown
-                    size={30}
-                    strokeWidth={1.2}
-                    className="text-gray-500"
-                  />
-                )}
               </span>
             </button>
             <div

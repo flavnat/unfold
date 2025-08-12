@@ -1,37 +1,45 @@
-import Footer from "../components/Footer";
-import Sr from "../components/Sr";
-import MainLayout from "../layouts/MainLayout";
+import Navbar from "../components/Navbar";
+import ServiceTabsWithAccordion from "../components/ServiceTabsMain";
 
 function Services() {
   return (
-    <MainLayout>
-      <section className="">
-        <div className="lg:w-[80%] mx-auto flex justify-center flex-col items-center md:py-24 py-10 text-center space-y-3 md:space-y-4">
-          <h1 className="lg:text-6xl md:text-5xl text-4xl">
-            Unleash Success with Our Comprehensive Services
+    <>
+      <Navbar />
+      <div className="bg-[#E1EBFF]">
+        <div className="py-40 font-serif items-center max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl leading-14">
+            Unleash Success with <br /> Our Comprehensive Services
           </h1>
-          <p className="md:text-lg text-zinc-600 md:w-8/12">
+          <p className="px-72 mt-4 text-lg">
             We offer a wide range of comprehensive services designed to address
             your business needs and propel your organization towards success.
           </p>
-        </div>
-        <div className="">
+
           <img
             src="/assets/hero1.png"
-            className="object-cover md:h-[500px] h-[300px] w-full rounded-3xl"
-            alt=""
-            srcset=""
+            className="object-cover h-[300px] sm:h-[400px] md:h-[500px] mt-10 w-full rounded-3xl shadow-lg"
+            alt="Hero"
           />
         </div>
-      </section>
 
-
-      <section className="px-10">
-        <Sr />
-      </section>
-      
-      {/* how its work */}
-    </MainLayout>
+        <div className="bg-white py-10 font-serif">
+          <div className="max-w-6xl mx-auto">
+            {/* /////////////////////////// */}
+            <div className="text-center">
+              <h1 className="text-4xl text-center mx-auto text-zinc-700">
+                Simplifies{" "}
+                <span className="italic">
+                  task management <br />
+                </span>
+                and enhances productivity!
+              </h1>
+            </div>
+            {/* /////////////////////////// */}
+            <ServiceTabsWithAccordion />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -1,31 +1,55 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 export default function Navbar() {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [shouldHide, setShouldHide] = useState(false);
 
-  // Check if the link is active
+  const menuItems = [
+    {
+      label: "Home",
+      href: "/",
+      exact: true,
+      bgColor: "#1B356A",
+      textColor: "#ffffff",
+    },
+    {
+      label: "About",
+      href: "/about",
+      bgColor: "#E1EBFF",
+      textColor: "#1B356A",
+    },
+    {
+      label: "Services",
+      href: "/services",
+      bgColor: "#E1EBFF",
+      textColor: "#1B356A",
+    },
+  ];
+
   const isLinkActive = (path, exact = false) => {
     return exact
       ? location.pathname === path
       : location.pathname.startsWith(path);
   };
 
-  const menuItems = [
-    { label: "Home", href: "/", exact: true },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-  ];
+  // Compute active item during render (instant, no delay)
+  const activeItem =
+    menuItems.find((item) => isLinkActive(item.href, item.exact)) ||
+    menuItems[0];
 
-  // Handle scroll to hide/show navbar
+  const headerBgColor = activeItem.bgColor;
+  const headerTextColor = activeItem.textColor;
+
+  // Scroll hide/show logic
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        setShouldHide(true); // scrolling down
+        setShouldHide(true);
       } else {
-        setShouldHide(false); // scrolling up
+        setShouldHide(false);
       }
       setLastScrollY(window.scrollY);
     };
@@ -36,11 +60,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full bg-[#f4f4f4] z-50 transition-transform duration-300 ease-in-out ${
+      style={{ backgroundColor: headerBgColor, color: headerTextColor }}
+      className={`fixed top-0 left-0 w-full z-50 font-serif transition-transform duration-300 ease-in-out ${
         shouldHide ? "-translate-y-full" : "translate-y-0"
-      } shadow-sm`}
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand */}
           <div className="flex items-center space-x-1">
@@ -49,17 +74,13 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden sm:flex items-center gap-8 text-lg">
+          <nav className="hidden sm:flex items-center gap-8">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.href}
-                className={`transition-colors hover:text-secondary ${
-                  isLinkActive(item.href, item.exact)
-                    ? "text-secondary font-semibold"
-                    : "text-gray-700 hover:text-gray-900"
-                }
-                `}
+                className="transition-colors"
+                style={{ color: headerTextColor }}
               >
                 {item.label}
               </Link>
@@ -69,8 +90,9 @@ export default function Navbar() {
           {/* Right-side Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              to={"/contact"}
-              className="px-4 py-2 text-sm font-medium text-secondary bg-transparent border border-secondary rounded-lg hover:bg-secondary hover:text-white transition-colors"
+              to="/contact"
+              className="px-4 py-2 text-sm font-medium bg-transparent border rounded-lg hover:text-white transition-colors"
+              style={{ borderColor: headerTextColor, color: headerTextColor }}
             >
               Contact Us
             </Link>
@@ -83,7 +105,8 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-gray-700"
+              className="w-6 h-6"
+              style={{ color: headerTextColor }}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -118,20 +141,21 @@ export default function Navbar() {
               <Link
                 key={index}
                 to={item.href}
-                className={`transition-colors hover:text-secondary ${
-                  isLinkActive(item.href, item.exact)
-                    ? "text-secondary font-semibold"
-                    : "text-gray-700"
-                }
-                `}
+                className="transition-colors"
+                style={{ color: headerTextColor }}
               >
                 {item.label}
               </Link>
             ))}
             <div className="pt-2 flex flex-col space-y-2">
               <Link
-                to={"/contact"}
-                className="px-4 py-2 self-start text-sm font-medium text-secondary hover:bg-secondary hover:text-white border border-secondary rounded-lg transition-colors"
+                to="/contact"
+                className="px-4 py-2 self-start text-sm font-medium rounded-lg transition-colors"
+                style={{
+                  color: headerTextColor,
+                  borderColor: headerTextColor,
+                  borderWidth: "1px",
+                }}
               >
                 Contact
               </Link>

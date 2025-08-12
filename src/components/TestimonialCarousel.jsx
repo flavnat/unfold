@@ -91,7 +91,7 @@ const TestimonialCarousel = ({
 
       {/* Arrows */}
       {showArrows && testimonials.length > 1 && (
-        <div className="flex justify-start sm:justify-start gap-3 mt-4">
+        <div className="flex justify-start sm:justify-start gap-3">
           <button
             className="p-2 rounded-full bg-secondary text-white transition-all hover:bg-opacity-90"
             onClick={goToPrevious}

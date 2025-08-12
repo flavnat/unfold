@@ -7,10 +7,13 @@
 @theme {
   --font-clashdisplay: "Clash Display", sans-serif;
   --font-generalsans: "General Sans", sans-serif;
-  --color-primary: #0367A6;
+  --color-primary: #1B356A;
   --color-secondary: #023e8a;
   /* --color-secondary: #013a63; */
   --color-varient: #DFE7F2;
+
+
+  
 }
 
 @layer base {
@@ -21,7 +24,7 @@
   body {
     @apply font-generalsans;
     /* background-color: #DFE7F2; */
-    background-color: #f4f4f4;
+    background-color: #1B356A;
     /* background-color: #dee4ff; */
   }
 }
