@@ -1,4 +1,9 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+
 const contactInfo = [
   {
     title: "Message Us",
@@ -15,14 +20,23 @@ const contactInfo = [
 ];
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="bg-primary">
-        <div className="py-40 font-serif text-white items-center max-w-6xl mx-auto text-center">
+        <div
+          className="py-20 sm:py-32 md:py-40 font-serif text-white items-center max-w-6xl mx-auto text-center px-4"
+          data-aos="fade-up"
+        >
           <div className="space-y-2">
-            <h1 className="text-4xl">Get in Touch with unfold solutions</h1>
-            <p className="w-1/2 mx-auto">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl">
+              Get in Touch with unfold solutions
+            </h1>
+            <p className="w-full sm:w-3/4 md:w-1/2 mx-auto text-sm sm:text-base">
               Interested in switching to solar? Have questions about our
               services? Our team is ready to help! Reach out to us today and
               take the first step toward energy independence.
@@ -30,13 +44,17 @@ function Contact() {
           </div>
         </div>
 
-        <div className="bg-[#E1EBFF] font-serif">
-          <div className="max-w-5xl mx-auto py-24 ps-28 grid grid-cols-3">
-            <div className="">
-              <div className="space-y-1 ">
-                <h1 className="text-2xl">Let's Connect</h1>
-                <p className="text-sm text-zinc-500">
-                  Have a project in mind? Let’s turn your ideas into stunning
+        <div
+          className="bg-[#E1EBFF] font-serif"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div className="max-w-5xl mx-auto py-16 sm:py-20 md:py-24 px-4 sm:ps-16 md:ps-28 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0">
+            <div>
+              <div className="space-y-1">
+                <h1 className="text-xl sm:text-2xl">Let's Connect</h1>
+                <p className="text-xs sm:text-sm text-zinc-500">
+                  Have a project in mind? Let's turn your ideas into stunning
                   realities. Reach out now
                 </p>
               </div>
@@ -47,17 +65,17 @@ function Contact() {
                     className={`flex justify-between space-x-4 py-4 border-b`}
                     key={info.title}
                   >
-                    <h4>{info.title}</h4>
-                    <h5>{info.content}</h5>
+                    <h4 className="text-sm sm:text-base">{info.title}</h4>
+                    <h5 className="text-sm sm:text-base">{info.content}</h5>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="max-w-lg w-full mx-auto col-span-2">
-              <h2 className="text-xl mb-6">Send Us a Message</h2>
+            <div className="max-w-lg w-full mx-auto lg:col-span-2">
+              <h2 className="text-lg sm:text-xl mb-6">Send Us a Message</h2>
               <form>
-                <div className="space-y-5">
+                <div className="space-y-4 sm:space-y-5">
                   {/* Name Field */}
                   <div>
                     <label
@@ -69,7 +87,7 @@ function Contact() {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
                       placeholder="Your name"
                       required
                     />
@@ -86,7 +104,7 @@ function Contact() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
                       placeholder="you@example.com"
                       required
                     />
@@ -103,7 +121,7 @@ function Contact() {
                     <input
                       type="text"
                       id="subject"
-                      className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
                       placeholder="How can we help?"
                       required
                     />
@@ -120,7 +138,7 @@ function Contact() {
                     <textarea
                       id="message"
                       rows={5}
-                      className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition resize-none"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition resize-none"
                       placeholder="Your message here..."
                       required
                     ></textarea>
@@ -141,6 +159,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
