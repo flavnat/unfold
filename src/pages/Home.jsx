@@ -102,7 +102,7 @@ function Home() {
       <div className="">
         <div className="grid gap-x-5 p-5 py-24 md:grid-cols-2 text-white font-serif items-center max-w-6xl mx-auto">
           <div className="">
-            <h4 className="my-4 border border-zinc-400 text-zinc-200 px-4 text-sm py-1 w-fit rounded-3xl capitalize">
+            <h4 className="my-4 border border-zinc-400 text-slate-300 px-4 text-sm py-1 w-fit rounded-3xl capitalize">
               Best consulting
             </h4>
             <h1 className="text-5xl leading-14">

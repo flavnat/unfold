@@ -7,13 +7,27 @@
 @theme {
   --font-clashdisplay: "Clash Display", sans-serif;
   --font-generalsans: "General Sans", sans-serif;
-  --color-primary: #1B356A;
-  --color-secondary: #023e8a;
-  /* --color-secondary: #013a63; */
-  --color-varient: #DFE7F2;
-
 
   
+  /* Primary Brand */
+  --color-primary: #1b356a; /* Main brand blue */
+  --color-secondary: #023e8a; /* Deep accent blue */
+
+  /* Backgrounds */
+  --color-bg: #ffffff; /* Default background */
+  --color-bg-muted: #dfe7f2; /* Light blue-gray, soft UI */
+  --color-bg-alt: #f8fafc; /* Very light, card backgrounds */
+  --color-bg-logo: #4382FF
+
+
+  /* Text Colors (3) */
+  --color-text: #1b356a; /* Dark blue text (primary) */
+  --color-light: #ffffff; /* White text (on dark bg) */
+  --color-muted: #A4A4A4; /* Gray-blue, secondary text */
+  --color-mutedforground: #D4D4D4;
+  /* Border & UI */
+  --color-border: #e2e8f0; /* Soft border */
+  --color-hover: #012e5e; /* Hover state for buttons/links */
 }
 
 @layer base {
@@ -24,7 +38,7 @@
   body {
     @apply font-generalsans;
     /* background-color: #DFE7F2; */
-    background-color: #1B356A;
+    background-color: #1b356a;
     /* background-color: #dee4ff; */
   }
 }
