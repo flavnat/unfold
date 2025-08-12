@@ -16,7 +16,7 @@ const servicesData = [
       {
         title: "L&D Outsourcing / A2Z L&D Installment",
         subtitle:
-          "End-to-end management of your learning and development function, tailored to your organization’s goals.",
+          "End-to-end management of your learning and development function, tailored to your organization's goals.",
       },
       {
         title: "Learning Strategy Development",
@@ -75,7 +75,7 @@ const servicesData = [
     image: "/assets/consulting&advisory.webp",
     title: "Expert Guidance for Success",
     description:
-      "Leverage our consultants’ deep expertise to identify opportunities, solve business challenges, and optimize processes for sustainable growth.",
+      "Leverage our consultants' deep expertise to identify opportunities, solve business challenges, and optimize processes for sustainable growth.",
     primaryAction: { text: "Get started", href: "/consulting" },
     secondaryAction: { text: "Learn more", href: "/consulting-more" },
     subtitle:
@@ -189,7 +189,7 @@ function ServiceTabsWithAccordion() {
   return (
     <div className="mt-6 font-serif">
       {/* Tabs */}
-      <div className="flex mt-14 flex-wrap justify-center gap-x-20 border-b border-zinc-300 max-w-6xl mx-auto">
+      <div className="flex mt-8 sm:mt-14 overflow-x-auto scroll-smooth flex-nowrap justify-center gap-4 sm:gap-x-20 max-w-6xl mx-auto px-4">
         {servicesData.map((tab, index) => {
           const isActive = active === index;
           return (
@@ -197,7 +197,7 @@ function ServiceTabsWithAccordion() {
               key={tab.label}
               onClick={() => setActive(index)}
               className={`
-                relative pb-2 text-xl cursor-pointer transition
+                relative pb-2 text-base sm:text-lg md:text-xl cursor-pointer transition
                 ${isActive ? "text-primary" : "text-zinc-500 hover:text-primary"}
                 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0
                 after:bg-primary after:transition-transform after:duration-300
@@ -211,7 +211,7 @@ function ServiceTabsWithAccordion() {
       </div>
 
       {/* Active Tab Content */}
-      <div className="max-w-6xl mx-auto mt-10 grid  gap-10 items-start">
+      <div className="max-w-6xl mx-auto mt-8 sm:mt-10 grid gap-6 sm:gap-10 items-start px-4">
         {/* Image and Description */}
         {/* <div>
           <img
@@ -223,20 +223,20 @@ function ServiceTabsWithAccordion() {
         </div> */}
 
         {/* Accordion with services */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto w-full">
           <Accordion defaultOpenIndex={0} allowMultiple={true}>
             <Accordion.Item
               title={activeTab.label}
               subtitle={activeTab.subtitle}
             >
-              <div className="grid md:grid-cols-2 gap-x-10 justify-between">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-10 justify-between">
                 {activeTab.services.map((service, index) => (
                   <div
                     key={index}
-                    className="border-t border-b border-zinc-300 space-y-1 py-6"
+                    className="border-b border-zinc-300 space-y-2.5 py-4 sm:py-6"
                   >
-                    <h4 className="text-xl">{service.title}</h4>
-                    <p className="text-zinc-500 text-sm md:text-base">
+                    <h4 className="text-lg sm:text-xl">{service.title}</h4>
+                    <p className="text-zinc-500 text-sm sm:text-base">
                       {service.subtitle}
                     </p>
                   </div>

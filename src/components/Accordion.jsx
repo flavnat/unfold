@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ChevronUp, ChevronDown } from "lucide-react";
 
 const Accordion = ({
   children,
@@ -44,29 +43,24 @@ const Accordion = ({
             }`}
           >
             <button
-              className="flex justify-between items-center py-5 w-full duration-150"
+              className="flex justify-between items-center py-4 sm:py-5 w-full duration-150 px-2 sm:px-0"
               onClick={() => togglePanel(index)}
               type="button"
               aria-expanded={isOpen}
             >
-              <div className="space-y-1 text-left cursor-pointer">
-                <span className="flex items-center text-2xl">
+              <div className="space-y-1 text-left cursor-pointer flex-1">
+                <span className="flex items-center text-lg sm:text-xl md:text-2xl">
                   {child.props.title}
                 </span>
-                <span className="text-zinc-500 text-sm sm:text-base">
+                <span className="text-zinc-500 text-xs sm:text-sm md:text-base">
                   {child.props.subtitle}
                 </span>
               </div>
-              <span
-                className={`transform transition-transform duration-200 ${
-                  isOpen ? "rotate-90" : ""
-                }`}
-              >
-              </span>
+            
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                isOpen ? "opacity-100" : "max-h-0 opacity-0"
+              className={`overflow-hidden transition-all duration-300 ease-in-out px-2 sm:px-0 ${
+                isOpen ? "opacity-100 pb-4" : "max-h-0 opacity-0"
               }`}
             >
               {child.props.children}

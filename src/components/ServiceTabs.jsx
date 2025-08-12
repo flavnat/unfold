@@ -16,7 +16,7 @@ function ServiceTabs() {
       image: "/assets/consulting&advisory.webp",
       title: "Expert Guidance for Success",
       description:
-        "Leverage our consultants’ deep expertise to identify opportunities, solve business challenges, and optimize processes for sustainable growth.",
+        "Leverage our consultants' deep expertise to identify opportunities, solve business challenges, and optimize processes for sustainable growth.",
       primaryAction: { text: "Get started", href: "/consulting" },
       secondaryAction: { text: "Learn more", href: "/consulting-more" },
     },
@@ -34,7 +34,7 @@ function ServiceTabs() {
   const [active, setActive] = useState(0);
   return (
     <div className="mt-6 font-serif">
-      <div className="flex mt-14 flex-wrap justify-center gap-x-20 border-b border-zinc-300 max-w-6xl mx-auto">
+      <div className="flex mt-8 sm:mt-14 overflow-x-auto scroll-smooth flex-nowrap justify-center gap-4 sm:gap-x-20 max-w-6xl mx-auto px-4">
         {tabs.map((tab, index) => {
           const isActive = active === index;
           return (
@@ -42,7 +42,7 @@ function ServiceTabs() {
               key={tab.label}
               onClick={() => setActive(index)}
               className={`
-          relative pb-2 text-xl cursor-pointer transition
+          relative pb-2 text-base sm:text-lg md:text-xl cursor-pointer transition
           ${isActive ? "text-primary" : "text-zinc-500 hover:text-primary"}
           after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0
           after:bg-primary after:transition-transform after:duration-300
@@ -57,20 +57,23 @@ function ServiceTabs() {
 
       {/* Tab Content */}
 
-      <div className="max-w-6xl mx-auto mt-10 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-6xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center px-4">
         <img
           src={tabs[active].image}
           alt={tabs[active].title}
-          className="rounded-xl shadow-lg"
+          className="rounded-xl shadow-lg w-full h-auto"
         />
         <div>
-          <h2 className="text-3xl mb-4">{tabs[active].title}</h2>
-          <p className="text-zinc-600 mb-6">{tabs[active].description}</p>
+          <h2 className="text-2xl sm:text-3xl mb-3 sm:mb-4">
+            {tabs[active].title}
+          </h2>
+          <p className="text-zinc-600 mb-4 sm:mb-6 text-sm sm:text-base">
+            {tabs[active].description}
+          </p>
           <div className="flex gap-4">
-          
             <a
               href={tabs[active].secondaryAction.href}
-              className="hover:underline text-primary"
+              className="hover:underline text-primary text-sm sm:text-base"
             >
               {tabs[active].secondaryAction.text}
             </a>
