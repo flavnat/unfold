@@ -7,15 +7,15 @@ import Navbar from "../components/Navbar";
 const contactInfo = [
   {
     title: "Message Us",
-    content: "info@unfold.com",
+    content: "unfoldbusinesssolutions@gmail.com",
   },
   {
     title: "Call Us",
-    content: "(555) 987-6543",
+    content: "+251910832473",
   },
   {
     title: "Location",
-    content: "4567 Elm Street, Suite 301,",
+    content: "22 Quality Bldg, Addis Ababa",
   },
 ];
 
@@ -29,7 +29,7 @@ function Contact() {
       <Navbar />
       <div className="bg-primary">
         <div
-          className="py-20 sm:py-32 md:py-40 font-serif text-white items-center max-w-6xl mx-auto text-center px-4"
+          className="py-20 sm:py-32 md:py-40 text-white items-center max-w-6xl mx-auto text-center px-4"
           data-aos="fade-up"
         >
           <div className="space-y-2">
@@ -44,37 +44,15 @@ function Contact() {
           </div>
         </div>
 
-        <div
-          className="bg-[#E1EBFF] font-serif"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div className="max-w-5xl mx-auto py-16 sm:py-20 md:py-24 px-4 sm:ps-16 md:ps-28 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0">
-            <div>
-              <div className="space-y-1">
-                <h1 className="text-xl sm:text-2xl">Let's Connect</h1>
-                <p className="text-xs sm:text-sm text-zinc-500">
-                  Have a project in mind? Let's turn your ideas into stunning
-                  realities. Reach out now
-                </p>
-              </div>
-
-              <div className="mt-6">
-                {contactInfo.map((info) => (
-                  <div
-                    className={`flex justify-between space-x-4 py-4 border-b`}
-                    key={info.title}
-                  >
-                    <h4 className="text-sm sm:text-base">{info.title}</h4>
-                    <h5 className="text-sm sm:text-base">{info.content}</h5>
-                  </div>
-                ))}
-              </div>
-            </div>
-
+        <div className="bg-[#E1EBFF]" data-aos="fade-up" data-aos-delay="100">
+          <div className="max-w-5xl mx-auto py-16">
             <div className="max-w-lg w-full mx-auto lg:col-span-2">
               <h2 className="text-lg sm:text-xl mb-6">Send Us a Message</h2>
-              <form>
+              <form
+                action="mailto:unfoldbusinesssolutions@gmail.com"
+                method="POST"
+                encType="text/plain"
+              >
                 <div className="space-y-4 sm:space-y-5">
                   {/* Name Field */}
                   <div>
@@ -87,7 +65,7 @@ function Contact() {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-400 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
                       placeholder="Your name"
                       required
                     />
@@ -104,7 +82,7 @@ function Contact() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-400 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
                       placeholder="you@example.com"
                       required
                     />
@@ -121,7 +99,7 @@ function Contact() {
                     <input
                       type="text"
                       id="subject"
-                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-400 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition"
                       placeholder="How can we help?"
                       required
                     />
@@ -138,7 +116,7 @@ function Contact() {
                     <textarea
                       id="message"
                       rows={5}
-                      className="w-full px-3 sm:px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition resize-none"
+                      className="w-full px-3 sm:px-4 py-2 border border-gray-400 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition resize-none"
                       placeholder="Your message here..."
                       required
                     ></textarea>
@@ -155,6 +133,45 @@ function Contact() {
                   </div>
                 </div>
               </form>
+            </div>
+
+            <div className="max-w-lg py-10 mx-auto">
+              <div className="space-y-1">
+                <h1 className="text-xl sm:text-2xl">Let's Connect</h1>
+                <p className="text-xs sm:text-sm text-zinc-500">
+                  Have a project in mind? Let's turn your ideas into stunning
+                  realities. Reach out now
+                </p>
+              </div>
+
+              <div className="mt-6">
+                {contactInfo.map((info) => (
+                  <div
+                    className="flex justify-between space-x-4 py-4 border-b"
+                    key={info.title}
+                  >
+                    <h4 className="text-sm sm:text-base">{info.title}</h4>
+
+                    {info.title === "Message Us" ? (
+                      <a
+                        href={`mailto:${info.content}`}
+                        className="text-sm sm:text-base hover:underline break-all"
+                      >
+                        {info.content}
+                      </a>
+                    ) : info.title === "Call Us" ? (
+                      <a
+                        href={`tel:${info.content}`}
+                        className="text-sm sm:text-base hover:underline"
+                      >
+                        {info.content}
+                      </a>
+                    ) : (
+                      <h5 className="text-sm sm:text-base">{info.content}</h5>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

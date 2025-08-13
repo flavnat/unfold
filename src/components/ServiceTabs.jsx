@@ -8,8 +8,7 @@ function ServiceTabs() {
       title: "Empower Your Skills",
       description:
         "Tailor training programs to match your team's unique needs with flexible modules, real-world exercises, and expert-led sessions. Track progress visually and ensure growth.",
-      primaryAction: { text: "Get started", href: "/learning" },
-      secondaryAction: { text: "Learn more", href: "/learning-more" },
+      secondaryAction: { text: "Learn more", href: "/services" },
     },
     {
       label: "Consulting & Advisory",
@@ -17,8 +16,7 @@ function ServiceTabs() {
       title: "Expert Guidance for Success",
       description:
         "Leverage our consultants' deep expertise to identify opportunities, solve business challenges, and optimize processes for sustainable growth.",
-      primaryAction: { text: "Get started", href: "/consulting" },
-      secondaryAction: { text: "Learn more", href: "/consulting-more" },
+      secondaryAction: { text: "Learn more", href: "/services" },
     },
     {
       label: "Project Management",
@@ -26,14 +24,13 @@ function ServiceTabs() {
       title: "Streamline Your Projects",
       description:
         "Manage projects effortlessly with our collaborative tools. Customize workflows, track tasks, and hit deadlines with precision.",
-      primaryAction: { text: "Get started", href: "/projects" },
-      secondaryAction: { text: "Learn more", href: "/projects-more" },
+      secondaryAction: { text: "Learn more", href: "/services" },
     },
   ];
 
   const [active, setActive] = useState(0);
   return (
-    <div className="mt-6 font-serif">
+    <div className="mt-6">
       <div className="flex mt-8 sm:mt-14 overflow-x-auto scroll-smooth flex-nowrap justify-center gap-4 sm:gap-x-20 max-w-6xl mx-auto px-4">
         {tabs.map((tab, index) => {
           const isActive = active === index;
@@ -57,13 +54,13 @@ function ServiceTabs() {
 
       {/* Tab Content */}
 
-      <div className="max-w-6xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center px-4">
+      <div className="max-w-6xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start px-4">
         <img
           src={tabs[active].image}
           alt={tabs[active].title}
           className="rounded-xl shadow-lg w-full h-auto"
         />
-        <div>
+        <div className="md:py-10">
           <h2 className="text-2xl sm:text-3xl mb-3 sm:mb-4">
             {tabs[active].title}
           </h2>

@@ -16,7 +16,7 @@ function Services() {
       <Navbar />
       <div className="bg-[#E1EBFF]">
         <div
-          className="py-20 sm:py-32 md:py-40 font-serif items-center max-w-6xl mx-auto text-center px-4"
+          className="py-20 sm:py-32 md:py-40  items-center max-w-6xl mx-auto text-center px-4"
           data-aos="fade-up"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-snug md:leading-14">
@@ -36,7 +36,7 @@ function Services() {
           />
         </div>
 
-        <div className="bg-white py-8 sm:py-10 font-serif">
+        <div className="bg-white py-8 sm:py-10 ">
           <div
             className="max-w-6xl mx-auto px-4"
             data-aos="fade-up"

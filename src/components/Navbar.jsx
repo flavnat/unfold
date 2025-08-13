@@ -61,7 +61,7 @@ export default function Navbar() {
   return (
     <header
       style={{ backgroundColor: headerBgColor, color: headerTextColor }}
-      className={`fixed top-0 left-0 w-full z-50 font-serif transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out ${
         shouldHide ? "-translate-y-full" : "translate-y-0"
       }`}
     >
