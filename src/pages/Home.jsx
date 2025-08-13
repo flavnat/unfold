@@ -17,6 +17,7 @@ import ServiceTabs from "../components/ServiceTabs";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router";
 
 const whyChooseUsData = [
   {
@@ -120,7 +121,7 @@ function Home() {
       </div>
       <div>
         <div
-          className="grid gap-5 p-4 sm:p-5 py-16 sm:py-20 md:py-24 lg:grid-cols-2 text-white font-serif items-center max-w-6xl mx-auto"
+          className="grid gap-5 p-4 sm:p-5 py-16 sm:py-20 md:py-24 lg:grid-cols-2 text-white items-center max-w-6xl mx-auto"
           data-aos="fade-up"
         >
           <div data-aos="fade-right">
@@ -135,22 +136,19 @@ function Home() {
               learning, strategic consulting, and agile project management.
             </p>
 
-            <button className="border mt-4 sm:mt-6 px-3 sm:px-4 py-2 flex space-x-2 border-zinc-200 rounded-3xl text-base sm:text-lg items-center">
+            <button className="border mt-4 sm:mt-6 px-3 sm:px-4 py-2 flex space-x-2 border-zinc-200 hover:bg-white hover:text-primary cursor-pointer duration-200 rounded-3xl text-base sm:text-lg items-center">
               <span>work together</span>{" "}
-              <span>
+              <span className=" animate-ping">
                 <ChevronsRightIcon strokeWidth={1.2} />
               </span>
             </button>
           </div>
           <div className="order-1 lg:order-2" data-aos="fade-left">
-            <img src="assets/air.webp" alt="" className="w-full h-auto" />
+            <img src="assets/hero-section.png" alt="" className="w-full h-auto" />
           </div>
         </div>
 
-        <div
-          className="bg-[#E1EBFF] py-8 sm:py-10 font-serif"
-          data-aos="fade-up"
-        >
+        <div className="bg-[#E1EBFF] py-8 sm:py-10" data-aos="fade-up">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center" data-aos="zoom-in">
               <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mx-auto text-zinc-700 px-4">
@@ -189,7 +187,7 @@ function Home() {
             </div>
 
             <div
-              className="order-1 lg:order-2 flex flex-col font-serif justify-between bg-[#E1EBFF] p-6 sm:p-8 lg:p-10"
+              className="order-1 lg:order-2 flex flex-col justify-between bg-[#E1EBFF] p-6 sm:p-8 lg:p-10"
               data-aos="fade-left"
             >
               <div className="space-y-3">
@@ -201,16 +199,24 @@ function Home() {
                   innovation, modern technology, and transformative impact come
                   together
                 </p>
+                <p className="text-zinc-500 text-sm sm:text-base">
+                  At Unfold Solutions, we don’t just deliver services we craft
+                  transformative experiences that empower our clients to thrive
+                  in an ever-changing world. By combining strategic insight,
+                  human-centered design, and forward-thinking innovation, we
+                  ensure every solution is not only effective today but
+                  sustainable for the future.
+                </p>
               </div>
 
-              <button className="border px-4 cursor-pointer hover:underline py-1.5 w-fit bg-primary text-white mt-6">
-                learn more
+              <button className="border px-4 cursor-pointer hover:underline rounded-lg py-2 w-fit bg-primary text-white mt-6">
+                <Link to={"/about"}>learn more</Link>
               </button>
             </div>
           </div>
         </div>
 
-        <div className="bg-white font-serif font-light">
+        <div className="bg-white font-light">
           <div
             className="max-w-6xl grid grid-cols-1 lg:grid-cols-2 py-8 sm:py-20 md:py-24 mx-auto gap-8 lg:gap-x-10 px-4"
             data-aos="fade-up"

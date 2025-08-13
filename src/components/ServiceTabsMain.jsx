@@ -187,7 +187,7 @@ function ServiceTabsWithAccordion() {
   const activeTab = servicesData[active];
 
   return (
-    <div className="mt-6 font-serif">
+    <div className="mt-6">
       {/* Tabs */}
       <div className="flex mt-8 sm:mt-14 overflow-x-auto scroll-smooth flex-nowrap justify-center gap-4 sm:gap-x-20 max-w-6xl mx-auto px-4">
         {servicesData.map((tab, index) => {

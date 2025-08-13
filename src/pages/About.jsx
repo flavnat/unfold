@@ -1,18 +1,17 @@
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import {
   Accessibility,
   Lamp,
   Lightbulb,
-  Linkedin,
   ShieldCheck,
-  Users,
+  Users
 } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { FaLinkedin } from "react-icons/fa";
 
 const coreValues = [
   {
@@ -66,12 +65,6 @@ const teamMembers = [
     role: "Team Lead",
     image: "/assets/team/team2.png",
   },
-  {
-    id: 4,
-    name: "Dawit Teshome",
-    role: "Head of Business",
-    image: "/assets/team/team2.png",
-  },
 ];
 
 function About() {
@@ -86,7 +79,7 @@ function About() {
       </div>
       <div className="bg-[#E1EBFF]">
         <div
-          className="py-20 sm:py-32 md:py-40 font-serif items-center max-w-6xl mx-auto text-center px-4"
+          className="py-20 sm:py-32 md:py-40  items-center max-w-6xl mx-auto text-center px-4"
           data-aos="fade-up"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-snug md:leading-14">
@@ -107,7 +100,7 @@ function About() {
           />
         </div>
 
-        <div className="bg-white font-serif">
+        <div className="bg-white ">
           <div
             className="max-w-6xl space-y-6 sm:space-y-8 grid grid-cols-1 lg:grid-cols-2 mx-auto py-8 sm:py-10 px-4 sm:px-10 gap-6 lg:gap-x-6 items-stretch"
             data-aos="fade-up"
@@ -135,7 +128,7 @@ function About() {
 
         <div className="bg-white">
           <div
-            className="max-w-6xl mx-auto py-12 sm:py-16 md:py-20 font-serif px-4"
+            className="max-w-6xl mx-auto py-12 sm:py-16 md:py-20  px-4"
             data-aos="fade-up"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-center">
@@ -169,18 +162,18 @@ function About() {
             className="max-w-6xl mx-auto py-16 sm:py-20 md:py-24 px-4"
             data-aos="fade-up"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl text-center font-serif">
-              Meet the <span className="font-serif"> experts behind </span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl text-center ">
+              Meet the <span className=""> experts behind </span>
               Unfold Solutions
               <br className="hidden sm:block" />
               your trusted IT Partners
             </h1>
 
-            <div className="my-8 sm:my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+            <div className="my-8 sm:my-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="space-y-3"
+                  className="space-y-3 bg-primary p-5 rounded-2xl text-white"
                   data-aos="fade-up"
                   data-aos-delay={member.id * 100}
                 >
@@ -192,9 +185,9 @@ function About() {
                     />
                   </div>
                   <div className="space-y-0.5 flex justify-between items-end">
-                    <div>
-                      <h4 className="text-base sm:text-lg">{member.name}</h4>
-                      <p className="text-xs sm:text-sm">{member.role}</p>
+                    <div className="space-y-1.5">
+                      <h4 className="md:text-lg text-sm">{member.name}</h4>
+                      <p className="text-xs sm:text-sm text-zinc-300">{member.role}</p>
                     </div>
                     <div>
                       <FaLinkedin className="w-6 h-6 hover:text-blue-700 cursor-pointer transition-colors" />
