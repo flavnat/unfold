@@ -4,7 +4,7 @@ function ServiceTabs() {
   const tabs = [
     {
       label: "Learning & Development",
-      image: "/assets/learning&development.webp",
+      image: "/assets/learning&development.png",
       title: "Empower Your Skills",
       description:
         "Tailor training programs to match your team's unique needs with flexible modules, real-world exercises, and expert-led sessions. Track progress visually and ensure growth.",

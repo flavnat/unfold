@@ -176,7 +176,9 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="max-w-7xl mx-auto">
+        <Footer />
+      </div>
     </>
   );
 }
