@@ -83,7 +83,7 @@ function Footer() {
             <Link to={"/contact"} className="hover:underline">
               Contact
             </Link>
-            <Link to={"services"} className="hover:underline">
+            <Link to={"/services"} className="hover:underline">
               Services
             </Link>
             <Link to={"/"} className="hover:underline">

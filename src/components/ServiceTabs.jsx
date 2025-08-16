@@ -31,7 +31,7 @@ function ServiceTabs() {
   const [active, setActive] = useState(0);
   return (
     <div className="mt-6">
-      <div className="flex mt-8 sm:mt-14 overflow-x-auto scroll-smooth flex-nowrap justify-center gap-4 sm:gap-x-20 max-w-6xl mx-auto px-4">
+      <div className="flex relative mt-8 sm:mt-14 overflow-x-auto scroll-smooth flex-nowrap justify-center gap-4 sm:gap-x-20 max-w-6xl mx-auto px-4">
         {tabs.map((tab, index) => {
           const isActive = active === index;
           return (
@@ -54,7 +54,7 @@ function ServiceTabs() {
 
       {/* Tab Content */}
 
-      <div className="max-w-6xl mx-auto mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start px-4">
+      <div className="max-w-6xl relative mx-auto mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start px-4">
         <img
           src={tabs[active].image}
           alt={tabs[active].title}

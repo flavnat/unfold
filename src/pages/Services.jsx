@@ -14,7 +14,10 @@ function Services() {
   return (
     <>
       <Navbar />
-      <div className="bg-[#E1EBFF]">
+      <div className="bg-[#E1EBFF] relative">
+        {/* <div className="bg-primary backdrop-brightness-110 size-72 rounded-full right-0 top-48  absolute">
+
+        </div> */}
         <div
           className="py-20 sm:py-32 md:py-40  items-center max-w-6xl mx-auto text-center px-4"
           data-aos="fade-up"

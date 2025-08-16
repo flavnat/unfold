@@ -144,11 +144,25 @@ function Home() {
             </button>
           </div>
           <div className="order-1 lg:order-2" data-aos="fade-left">
-            <img src="assets/hero-section.png" alt="" className="w-full h-auto" />
+            <img
+              src="assets/hero-section.png"
+              alt=""
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
-        <div className="bg-[#E1EBFF] py-8 sm:py-10" data-aos="fade-up">
+        <div
+          className="bg-[#E1EBFF] py-8 sm:py-10 overflow-hidden relative"
+          data-aos="fade-up"
+        >
+          <div className="absolute inset-0 -z-10 right-0">
+            <img
+              // src="/assets/arrow-image.png"
+              alt=""
+              className="w-[500px] object-cover opacity-100 mix-blend-multiply"
+            />
+          </div>
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center" data-aos="zoom-in">
               <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mx-auto text-zinc-700 px-4">
